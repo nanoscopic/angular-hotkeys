@@ -1,18 +1,14 @@
 {
   "name": "angular-hotkeys",
   "main": [
-    "build/hotkeys.js",
-    "build/hotkeys.css"
+    "src/hotkeys.js",
+    "src/hotkeys.css"
   ],
   "ignore": [
-    "**/.*",
-    "node_modules",
-    "components",
-    "test",
-    "example"
+    "**/.*"
   ],
   "devDependencies": {
-    "mousetrap": "~1.5.2",
+    "angular-mousetrap": "~1.7.0",
     "angular-mocks": "~1.2.15",
     "angular-route": "~1.2.15"
   }
