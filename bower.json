@@ -7,8 +7,10 @@
   "ignore": [
     "**/.*"
   ],
+  "dependencies": {
+    "angular-mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.1"
+  },
   "devDependencies": {
-    "angular-mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.0",
     "angular-mocks": "~1.2.15",
     "angular-route": "~1.2.15"
   }
