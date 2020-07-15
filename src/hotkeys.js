@@ -2,7 +2,7 @@
 // Copyright (c) 2020 David Helkowski
 // License: MIT
 
-angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector, Mousetrap ) {
+angular.module('cfp.hotkeys', []).provider('hotkeys', ['angularMousetrap'], function( $injector, Mousetrap ) {
   "ngInject";
 
   /** Configurable setting to disable the cheatsheet entirely
