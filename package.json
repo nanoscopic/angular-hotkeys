@@ -21,6 +21,9 @@
   },
   "scripts": {
   },
+  "dependencies": {
+    "angular-mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.0"
+  },
   "devDependencies": {
   }
 }
