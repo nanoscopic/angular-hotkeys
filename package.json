@@ -1,7 +1,7 @@
 {
   "name": "angular-hotkeys",
   "author": "David Helkowski",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "license": "MIT",
   "description": "Automatic keyboard shortcuts for your Angular Apps",
   "main": "src/hotkeys.js",
@@ -22,7 +22,7 @@
   "scripts": {
   },
   "dependencies": {
-    "angular-mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.4"
+    "angular-mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.5"
   },
   "devDependencies": {
   }
