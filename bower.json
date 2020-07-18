@@ -8,7 +8,7 @@
     "**/.*"
   ],
   "dependencies": {
-    "mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.11"
+    "mousetrap": "https://github.com/nanoscopic/mousetrap.git#1.7.12"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.15",
