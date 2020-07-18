@@ -2,8 +2,6 @@
 // Copyright (c) 2020 David Helkowski
 // License: MIT
 
-import Mousetrap from "mousetrap";
-
 (function() {
 
   'use strict';
@@ -11,6 +9,7 @@ import Mousetrap from "mousetrap";
   angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector ) {
     "ngInject";
     
+    var Mousetrap = require("mousetrap");
     var MousetrapMod = new Mousetrap();
     var MousetrapInstance = MousetrapMod.createInstance();
     
