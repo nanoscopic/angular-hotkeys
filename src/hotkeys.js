@@ -2,10 +2,12 @@
 // Copyright (c) 2020 David Helkowski
 // License: MIT
 
-angular.module('cfp.hotkeys', ["angularMousetrap"]).provider('hotkeys', function( $injector ) {
+import Mousetrap from "angular-mousetrap";
+
+angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector ) {
   "ngInject";
   
-  var Mousetrap = $injector.get("angularMousetrap");
+  var MousetrapInstance = Mousetrap.createInstance();
   
   /** Configurable setting to disable the cheatsheet entirely
    * @type {Boolean} */
@@ -345,10 +347,10 @@ angular.module('cfp.hotkeys', ["angularMousetrap"]).provider('hotkeys', function
       }
 
       if (typeof(action) === 'string') {
-        Mousetrap.bind(combo, wrapApply(callback), action);
+        MousetrapInstance.bind(combo, wrapApply(callback), action);
       }
       else {
-        Mousetrap.bind(combo, wrapApply(callback));
+        MousetrapInstance.bind(combo, wrapApply(callback));
       }
 
       var hotkey = new Hotkey(combo, description, callback, action, allowIn, persistent);
@@ -365,7 +367,7 @@ angular.module('cfp.hotkeys', ["angularMousetrap"]).provider('hotkeys', function
     function _del (hotkey) {
       var combo = (hotkey instanceof Hotkey) ? hotkey.combo : hotkey;
 
-      Mousetrap.unbind(combo);
+      MousetrapInstance.unbind(combo);
 
       if (angular.isArray(combo)) {
         var retStatus = true;
