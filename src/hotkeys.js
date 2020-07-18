@@ -7,7 +7,7 @@ import Mousetrap from "mousetrap";
 angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector ) {
   "ngInject";
   
-  var MousetrapInstance = Mousetrap.createInstance();
+  var MousetrapInstance = Mousetrap().createInstance();
   
   /** Configurable setting to disable the cheatsheet entirely
    * @type {Boolean} */
