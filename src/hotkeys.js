@@ -2,7 +2,7 @@
 // Copyright (c) 2020 David Helkowski
 // License: MIT
 
-import Mousetrap from "angular-mousetrap";
+import Mousetrap from "mousetrap";
 
 angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector ) {
   "ngInject";
