@@ -10,8 +10,7 @@
     "ngInject";
     
     var Mousetrap = require("mousetrap");
-    var MousetrapMod = new Mousetrap();
-    var MousetrapInstance = MousetrapMod.createInstance();
+    var MousetrapInstance = new Mousetrap.Mousetrap(); // Empty element defaults to document
     
     /** Configurable setting to disable the cheatsheet entirely
      * @type {Boolean} */
