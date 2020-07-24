@@ -9,6 +9,7 @@
   angular.module('cfp.hotkeys', []).provider('hotkeys', function( $injector ) {
     "ngInject";
     
+    var self = this;
     var Mousetrap = require("mousetrap");
     var MousetrapInstance = new Mousetrap.Mousetrap(); // Empty element defaults to document
     
@@ -56,7 +57,7 @@
      * @type {String} */
     this.cheatSheetDescription = 'Show / hide this help menu';
   
-    this.Mousetrap = function ($rootElement, $rootScope, $compile, $window, $document) {
+    this.$get = function ($rootElement, $rootScope, $compile, $window, $document) {
       "ngInject";
       
       /** Convert strings like cmd into symbols like ⌘
@@ -500,18 +501,17 @@
         useNgRoute:            this.useNgRoute,
         purgeHotkeys:          purgeHotkeys,
         templateTitle:         this.templateTitle,
-        pause:                 pause,
-        unpause:               unpause
+        //pause:                 pause,
+        //unpause:               unpause
       };
   
       return publicApi;
   
     };
     
-    this.$get = function() {
-      var self = this;
+    /*this.$get = function() {
       return new self.Mousetrap();
-    }
+    }*/
   } ).directive('hotkey', function ( hotkeys ) {
     "ngInject";
   
